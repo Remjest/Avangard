@@ -35,3 +35,24 @@
 
 - **Адаптивность под все устройства**
   Интерфейс корректно отображается на мобильных, планшетах и десктопах.
+
+## Превью
+1. Главная страница
+<img width="2560" height="1440" alt="image" src="https://github.com/user-attachments/assets/5644a802-1c78-4d10-89f8-23cedef21b6d" />
+
+2. Меню
+<img width="2498" height="1357" alt="image" src="https://github.com/user-attachments/assets/8e9059fe-8fee-4cf4-8103-81b1471e4961" />
+
+3. Форма входа
+<img width="1126" height="718" alt="image" src="https://github.com/user-attachments/assets/fe7975a4-ab5d-4477-b410-14e544ec51c6" />
+
+4. Функционал админ-панели
+<img width="2472" height="1248" alt="image" src="https://github.com/user-attachments/assets/2478a6b2-802e-4dda-8aed-9f7fcc264261" />
+<img width="2474" height="1092" alt="image" src="https://github.com/user-attachments/assets/5dc794dd-9109-4c80-8f32-6889ad313b40" />
+
+5. Меню администратора
+<img width="585" height="442" alt="image" src="https://github.com/user-attachments/assets/32c27a61-cbaf-44a3-ace0-ef42a40d68af" />
+
+
+
+
