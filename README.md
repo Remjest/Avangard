@@ -1,36 +1,37 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Авангард — Экспертно-оценочная компания в Томске
 
-## Getting Started
+**Авангард** — это многостраничное приложение для экспертно-оценочной компании, предоставляющего профессиональные услуги в этой сфере в Томске. Сайт создан по просьбе знакомого мне человека.
 
-First, run the development server:
+Приложение построено с использованием **Next.js**, **TypeScript** и *Rest API**, адаптировано под все устройства, имеет админ панель для автоматизации создания новых услуг, не требующей участия разработчика. Владелец самостоятельно может добавлять, редактировать и удалять страницы сайта, а так же менять содержание главной страницы сайта.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Преимущества приложения
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Навигация по сайту**
+  Используются удобное боковое меню с подсветкой активного раздела. Реализовано с помощью изменения состояния меню, а так же получением данных о структуре сайта с API. Трехуровневая вложенность.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Static Site Generation**
+  SSG используется для страниц сайта, которые не предполагают серверные данные. Обеспечивает минимальную нагрузку на клиент.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Incremental Static Generation**
+  ISG позволяет актуализировать содержимое сайта для пользователей без большой нагрузки на серверную часть проекта.
+  
+- **Server-Side Rendering**
+  SSR используется приимущественно в админ-панели сайта, обеспечивая быстрое реагирование на изменение приходящих данных и их последующую актуализацию.
 
-## Learn More
+- **Authorization**
+  Вход в админ-панель для обычного пользователя не осуществим, наличие токена авторизации проверяется компонентом-оберткой, установленном на всех страницах администратора. Также эта часть приложения не индексируется поисковыми роботами, нет возможности "случайно" попасть на авторизацию администратора.
 
-To learn more about Next.js, take a look at the following resources:
+- **Validation**
+  Для удобства администратора, все поля ввода строго валидируются, при этом есть подсказки для всех этапов создания страниц.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Parsing**
+  Дополнительно для администратора есть возможность самостоятельно стилизовать контент. Для этого интегрированы пользовательские тэги, при использовании которых обычный текст парсится в html-разметку. Можно делать текст жирным, курсивным, оборачивать его в ссылку, использовать отступы и табуляцию. Все тэги можно комбинировать между собой.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **SEO-оптимизация**
+  Структура и разметка сайта продуманы для улучшения индексации поисковыми системами. У администратора есть возможность самому настраивать **meta-тэги** на каждой странице.
 
-## Deploy on Vercel
+- **Интеграция с картами**
+  Использован API Яндекс.Карт для отображения карты с адресом компании.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Адаптивность под все устройства**
+  Интерфейс корректно отображается на мобильных, планшетах и десктопах.
